@@ -90,3 +90,24 @@ window.addEventListener("scroll", function () {
   }
 
 });
+
+document.getElementById("menuLink").addEventListener("click", function(event) {
+  event.preventDefault();
+  let pdfSection = document.getElementById("pdfSection");
+
+  if (pdfSection) {
+      pdfSection.style.display = "flex"; // Make sure it appears
+      console.log("PDF section opened!"); // Debugging message
+  } else {
+      console.error("PDF section not found!");
+  }
+});
+
+document.getElementById("closePdf").addEventListener("click", function() {
+  let pdfSection = document.getElementById("pdfSection");
+
+  if (pdfSection) {
+      pdfSection.style.display = "none";
+      console.log("PDF section closed!");
+  }
+});

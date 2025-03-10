@@ -14,7 +14,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
   <!-- 
     - custom css link
   -->
@@ -75,7 +83,7 @@
     <div class="container">
 
         <h1>
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
               <img src="img/Layer as.png" alt="Foodie Logo">
             </a>
           </h1>
@@ -93,11 +101,11 @@
           </li>
 
           <li class="nav-item">
-            <a href="#food-menu" class="navbar-link" data-nav-link>Menu</a>
+            <a href="menu.html" class="navbar-link" data-nav-link>Menu</a>
           </li>
 
           <li class="nav-item">
-            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            <a href="#gallery" class="navbar-link" data-nav-link>Gallery</a>
           </li>
 
           <li class="nav-item">
@@ -112,7 +120,7 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <button class="btn btn-hover">Reservation</button>
+        <!-- <button class="btn btn-hover">Reservation</button> -->
 
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
           <span class="line top"></span>
@@ -169,7 +177,8 @@
 
             <p class="hero-text">Food nourishes the body, providing essential nutrients for a healthy life.</p>
 
-            <button class="btn">View Menu</button>
+            <a href="menu.html" class="btn">View Menu</a>
+
 
           </div>
 
@@ -354,7 +363,7 @@
 
 
      <!-- About Us Section start -->
-<section class="container py-5 why-maghil">
+<section class="container py-5 why-maghil" id="about">
     <div class="row align-items-center">
       <div class="col-md-6 text-center">
         <img src="img/a2.jpg" alt="Waiter giving thumbs up" class="img-fluid rounded" style="width: 500px; height: 450px;">
@@ -377,12 +386,15 @@
     </div>
   </section>
 
+
+
+
   <!-- 
     - #Gallery
   -->
 
      
-  <section class="gallery-section">
+  <section class="gallery-section" id="gallery">
     <h2 class="gallery-heading">Gallery</h2>
     <div class="gallery-line"></div>
 
