@@ -148,12 +148,19 @@
   }
   
   body {
-    background-color: var(--white);
-    color: var(--sonic-silver);
+    /* background-color: var(--white); */
+    /* color: var(--sonic-silver); */
     font-size: 1.6rem;
     line-height: 1.6;
     overflow-x: hidden;
+      background-image: url("img/hero-bg.jpg");
+      background-size: cover;  /* Ensures the image covers the entire screen */
+      background-repeat: no-repeat;  /* Prevents repeating */
+      background-position: center;  /* Centers the image */
+      background-attachment: fixed;  /* Keeps the background fixed */
   }
+  
+  
   
   body.active { overflow: hidden; }
   
@@ -549,13 +556,14 @@
   }
   
   .hero-title {
-    color: var(--champagne-pink);
+    color: white;
     max-width: 12ch;
     margin-inline: auto;
   }
   
   .hero-text {
-    color: var(--desert-sand);
+    color: white;   
+    /* color: var(--desert-sand); */
     margin-block: 15px 30px;
     max-width: 44ch;
     margin-inline: auto;
@@ -575,27 +583,37 @@
   /*-----------------------------------*\
     #PROMO
   \*-----------------------------------*/
-  
+  .promo {
+    background-image: url("img/hero-bg.jpg");
+    background-size: cover;  /* Cover the entire section */
+    background-repeat: no-repeat;  /* No repetition */
+    background-position: center;  /* Center the image */
+    background-attachment: fixed;  /* Keep it fixed while scrolling */
+}
+
   .promo-card {
     position: relative;
-    background-color: var(--white);
+    background: none;
     text-align: center;
+    /* background-image: url("img/hero-bg.jpg"); */
     padding: 40px 30px;
     box-shadow: var(--shadow-2);
     z-index: 1;
+   
   }
   
   .promo-card::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: var(--deep-saffron);
+    background-color: var(--deep-saffron); /* Uncomment this */
     clip-path: var(--clip-path-1);
     transform: scaleY(0.3);
     transform-origin: bottom;
     z-index: -1;
     transition: var(--transition-1);
-  }
+}
+
   
   .promo-card:hover::after {
     clip-path: var(--clip-path-2);
@@ -606,14 +624,18 @@
   
   .promo-card:hover .card-icon path { fill: var(--white); }
   
-  .promo-card:hover :is(.card-title, .card-text) { color: var(--white); }
+  .promo-card:hover :is(.card-title, .card-text) { color: black }
   
   .promo-card .card-title {
     margin-block: 15px;
+    color: white;
+    font-weight: 800;
     transition: var(--transition-1);
   }
   
   .promo-card .card-text {
+    color: white;
+    font-weight: 500;
     margin-block-end: 15px;
     transition: var(--transition-1);
   }
@@ -670,7 +692,7 @@
   
   .why-maghil h3 {
     /* font-family: "Lato", serif; */
-    font-family: "Outfit", serif;
+    font-family: var(--ff-rubik);
     color: #ff9d2d;
     font-size: 3.9rem;
     text-transform: uppercase;
@@ -679,11 +701,11 @@
   
   h1 {
     /* font-family: "Lato", serif; */
-    font-family: "Outfit", serif;
+    font-family: var(--ff-rubik);
     font-size: 4rem;
     font-weight: 900;
     margin: 1rem 0;
-    color: #0d1216;
+    color: white
   }
   
  .why-maghil-heading h1 .highlight {
@@ -694,9 +716,9 @@
   }
   
   .why-maghil p {
-    font-family: "Roboto", serif;
+    font-family: var(--ff-roboto);
     font-size: 22px;
-    color: #787878;
+    color: white;
     font-weight: 400;
     margin: 0.5rem 0;
   }
@@ -965,12 +987,12 @@ height: 600px;
   .gallery-section {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
 }
 
 .gallery-heading {
-    font-size: 2.5rem;
-    color: #333;
+    font-size: 4rem;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -1206,9 +1228,194 @@ height: 600px;
   }
   
   
-  
-  
-  
+    /*-----------------------------------*\
+    #contactus
+  \*-----------------------------------*/
+
+  .contact-form{
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    /* background: #69275c; */
+    padding: 30px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+}
+.container{
+    max-width: 800px;
+    margin-top: 0 auto;
+}
+.contact-form h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    color : white;
+    font-family: 'poppins';
+}
+.contact-form h2{
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #ff9d2d;
+    text-align: center;
+}
+.contact-form .main{
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+}
+.content{
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: #fff;
+    box-shadow: 2px 9px 49px -17px rgba(156, 39, 148, 0.1);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.form-img{
+    flex-basis: 50%;
+    background: white;
+    background-size: cover;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-items: center;
+    display: grid;
+}
+.form-img img {
+  max-width: 100%; /* Adjust percentage as needed */
+  width: 600px; /* Ensures aspect ratio is maintained */
+  height: 400px; /* Ensures aspect ratio is maintained */
+}
+
+.btn,
+button,
+input{
+    border-radius: 35px;
+}
+.btn:hover,
+button:hover{
+    color: #97359c;
+    transition: 0.5s ease;
+}
+.contact-form form{
+    margin: 30px 0;
+}
+.contact-form input,
+textarea{
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #999;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid #f0f0f0;
+    background: #fcfcfc;
+    transition: 0.3s ease;
+}
+.contact-form input:focus{
+    background: transparent;
+    border: 1px solid #ff9d2d;
+}
+.contact-form button{
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: #ff9d2d;
+    font-weight: 600;
+    transition: 0.3s ease;
+    padding: 14px 15px;
+    border: 1px solid #69275c;
+
+}
+@media (max-width: 768px) {
+  .contact-form .main {
+      flex-direction: column;
+  }
+
+  .content {
+      order: 1;
+      border-radius: 8px 8px 0 0; /* Rounded corners on top */
+      padding: 2em; /* Reduce padding for better spacing */
+  }
+
+  .form-img {
+      order: 2;
+      border-radius: 0 0 8px 8px; /* Rounded corners on bottom */
+      padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .form-img img {
+      width: 100%; /* Make it responsive */
+      height: auto;
+      max-width: 350px; /* Reduce image size on small screens */
+      margin: 0 auto; /* Center the image */
+  }
+
+  .contact-form h1 {
+      font-size: 3rem; /* Adjust heading size */
+  }
+
+  .contact-form h2 {
+      font-size: 24px;
+      line-height: 35px;
+  }
+
+  .contact-form form {
+      margin: 20px 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      padding: 12px 18px;
+      font-size: 14px;
+  }
+
+  .contact-form button {
+      font-size: 16px;
+      padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form h1 {
+      font-size: 2.5rem; /* Further reduce heading size */
+  }
+
+  .contact-form h2 {
+      font-size: 20px;
+      line-height: 30px;
+  }
+
+  .content {
+      padding: 1.5em;
+  }
+
+  .form-img {
+      padding: 15px;
+  }
+
+  .form-img img {
+      max-width: 280px; /* Further reduce image size */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      padding: 10px 15px;
+      font-size: 13px;
+  }
+
+  .contact-form button {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
   /*-----------------------------------*\
     #DELIVERY
   \*-----------------------------------*/
@@ -1648,7 +1855,7 @@ height: 600px;
   /* ================================================================ */
 /* Footer */
 .footer-wrapper{
-    background-color:#fff; 
+    /* background-color:#fff;  */
     width: 100%;
     height: auto;
   }
@@ -1662,20 +1869,21 @@ height: 600px;
   .footer-wrapper .contact .address{
     font-size: 16px;
     text-decoration: none;
-    color: #000;
+    color: white;
   }
   .footer-wrapper .contact .phone{
     font-size: 16px;
+    color: white;
   }
   .footer-wrapper .contact .mail{
     font-size: 16px;
     text-decoration: none;
-    color: #000;
+    color: white;
   }
   .footer-wrapper .contact .address:hover,
   .footer-wrapper .contact .phone:hover,
   .footer-wrapper .contact .mail:hover{
-    color: green;
+    color: black;
   }
   .footer-wrapper .social-icons .s-icon{
     color: #441752;
@@ -1695,12 +1903,12 @@ height: 600px;
     list-style: none;
   }
   .footer-wrapper .quick-links ul a{
-    color: #000;
+    color: white;
     text-decoration: none;
     margin-bottom: 3px;
   }
   .footer-wrapper .quick-links ul a:hover{
-    color: green;
+    color: black;
   }
   
   .hr{

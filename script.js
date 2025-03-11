@@ -111,3 +111,16 @@ document.getElementById("closePdf").addEventListener("click", function() {
       console.log("PDF section closed!");
   }
 });
+
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevents default form submission
+      
+      // Simulate form submission (Replace this with actual backend logic)
+      alert("Form submitted successfully!");
+
+      // Clears form fields after submission
+      this.reset();
+
+      // Redirect to remove submission state
+      window.location.href = window.location.pathname; 
+  });
