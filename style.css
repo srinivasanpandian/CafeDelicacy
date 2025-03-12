@@ -1286,9 +1286,10 @@ height: 600px;
     display: grid;
 }
 .form-img img {
-  max-width: 100%; /* Adjust percentage as needed */
-  width: 600px; /* Ensures aspect ratio is maintained */
+  max-width: 105%; /* Adjust percentage as needed */
+  width: 700px; /* Ensures aspect ratio is maintained */
   height: 400px; /* Ensures aspect ratio is maintained */
+  border-radius: 10%;
 }
 
 .btn,
